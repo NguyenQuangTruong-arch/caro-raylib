@@ -5,8 +5,6 @@ VisualStudioVersion = 17.14.37012.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "caroGame", "caroGame.vcxproj", "{C4F3E615-B0C0-4121-D9D9-2FC9C50577AF}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "raylib", "raylib\raylib.vcxproj", "{8898EA18-743A-15EF-5DF5-284349369C3F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -29,18 +27,6 @@ Global
 		{C4F3E615-B0C0-4121-D9D9-2FC9C50577AF}.Release|Win32.Build.0 = Release|Win32
 		{C4F3E615-B0C0-4121-D9D9-2FC9C50577AF}.Release|x64.ActiveCfg = Release|x64
 		{C4F3E615-B0C0-4121-D9D9-2FC9C50577AF}.Release|x64.Build.0 = Release|x64
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Debug|ARM64.ActiveCfg = Debug|ARM64
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Debug|ARM64.Build.0 = Debug|ARM64
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Debug|Win32.Build.0 = Debug|Win32
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Debug|x64.ActiveCfg = Debug|x64
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Debug|x64.Build.0 = Debug|x64
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|ARM64.ActiveCfg = Release|ARM64
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|ARM64.Build.0 = Release|ARM64
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|Win32.ActiveCfg = Release|Win32
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|Win32.Build.0 = Release|Win32
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|x64.ActiveCfg = Release|x64
-		{8898EA18-743A-15EF-5DF5-284349369C3F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
