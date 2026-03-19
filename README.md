@@ -30,5 +30,5 @@ A minimalist, liminal-space inspired Gomoku (Caro) game written in C using the R
 4. Press F5 (or click Local Windows Debugger) to build and run the game.
 
 ## Screenshots
-![Main Menu](link-to-image)
-![Gameplay](link-to-image)
+![Main Menu](<img width="1593" height="897" alt="Image" src="https://github.com/user-attachments/assets/07d9f993-a0b2-4d27-8fc3-53ee0f96c1d9" />)
+![Gameplay](<img width="1588" height="893" alt="Image" src="https://github.com/user-attachments/assets/4b2fa325-1afd-478f-b4d9-833118a0ca1e" />)
