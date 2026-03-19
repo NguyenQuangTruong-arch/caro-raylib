@@ -1,0 +1,23 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.dbmdl
+*.jfm
+
+# Build results
+Debug/
+Release/
+x64/
+x86/
+bin/
+obj/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+
+# Save files
+*.dat
+*.sav
