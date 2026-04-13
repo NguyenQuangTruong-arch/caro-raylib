@@ -174,9 +174,7 @@ void Model_MakeAIMove(void) {
             if (game.board[i][j] == 0) {
                 int attackScore = GetCellScore(j, i, 2);
                 int defendScore = GetCellScore(j, i, 1);
-
                 int totalScore = attackScore + (int)(defendScore * 1.2f);
-
                 totalScore += GetRandomValue(0, 5);
 
                 if (totalScore > bestScore) {
@@ -187,6 +185,5 @@ void Model_MakeAIMove(void) {
             }
         }
     }
-
     game.board[bestY][bestX] = 2;
 }

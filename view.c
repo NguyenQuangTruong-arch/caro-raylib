@@ -157,14 +157,14 @@ void View_Draw(int loadingProgress) {
         if (ui.slotMenuIndex == 0) {
             DrawTextCentered((Rectangle) { screenW / 2 - 200, 265, 400, 20 },
                 ui.isInputMode ? "[ESC] to Stop Typing  |  [ENTER] to Confirm" : "[ENTER] to Start Typing", 16, GRAY);
-    }
+        }
 
         // Hiện chữ và con trỏ nhấp nháy
         char displayStr[128];
         if (ui.isInputMode && (int)(GetTime() * 2) % 2 == 0) {
             snprintf(displayStr, sizeof(displayStr), "%s_", ui.inputText);
         }
-    else {
+        else {
             snprintf(displayStr, sizeof(displayStr), "%s", ui.inputText);
         }
         DrawTextCentered(txtBox, displayStr, 30, textColor);
