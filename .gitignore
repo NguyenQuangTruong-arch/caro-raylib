@@ -4,6 +4,7 @@
 *.suo
 *.dbmdl
 *.jfm
+.vscode/
 
 # Build results
 Debug/
@@ -19,3 +20,4 @@ obj/
 # Save files
 *.dat
 *.sav
+saveFiles/
