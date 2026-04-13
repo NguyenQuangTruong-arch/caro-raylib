@@ -332,48 +332,6 @@ static void HandleSettings(Vector2 mousePos, bool mouseClicked, bool enterPresse
     }
 }
 
-static void HandleSaveLoad(Vector2 mousePos, bool mouseClicked, bool enterPressed) {
-    int screenW = GetScreenWidth();
-    Rectangle slot1 = { screenW / 2 - 150, 300, 300, 60 };
-    Rectangle slot2 = { screenW / 2 - 150, 380, 300, 60 };
-    Rectangle slot3 = { screenW / 2 - 150, 460, 300, 60 };
-    Rectangle btnBack = { screenW / 2 - 150, 580, 300, 60 };
-
-    if (CheckCollisionPointRec(mousePos, slot1)) ui.slotMenuIndex = 0;
-    else if (CheckCollisionPointRec(mousePos, slot2)) ui.slotMenuIndex = 1;
-    else if (CheckCollisionPointRec(mousePos, slot3)) ui.slotMenuIndex = 2;
-    else if (CheckCollisionPointRec(mousePos, btnBack)) ui.slotMenuIndex = 3;
-
-    if (IsKeyPressed(KEY_W) || IsKeyPressed(KEY_UP)) {
-        ui.slotMenuIndex = (ui.slotMenuIndex > 0) ? ui.slotMenuIndex - 1 : 3;
-        View_PlaySFX();
-    }
-    if (IsKeyPressed(KEY_S) || IsKeyPressed(KEY_DOWN)) {
-        ui.slotMenuIndex = (ui.slotMenuIndex < 3) ? ui.slotMenuIndex + 1 : 0;
-        View_PlaySFX();
-    }
-
-    if (enterPressed || mouseClicked) {
-        bool trigger1 = (ui.slotMenuIndex == 0 && enterPressed) || (mouseClicked && CheckCollisionPointRec(mousePos, slot1));
-        bool trigger2 = (ui.slotMenuIndex == 1 && enterPressed) || (mouseClicked && CheckCollisionPointRec(mousePos, slot2));
-        bool trigger3 = (ui.slotMenuIndex == 2 && enterPressed) || (mouseClicked && CheckCollisionPointRec(mousePos, slot3));
-        bool triggerBack = (ui.slotMenuIndex == 3 && enterPressed) || (mouseClicked && CheckCollisionPointRec(mousePos, btnBack));
-
-        if (triggerBack) game.state = game.previousState;
-        else if (trigger1) {
-            if (game.state == STATE_SAVE_MENU) { Model_SaveGame(1); game.state = game.previousState; }
-            else if (Model_SaveExists(1)) { Model_LoadGame(1); game.state = STATE_PLAYING; }
-        }
-        else if (trigger2) {
-            if (game.state == STATE_SAVE_MENU) { Model_SaveGame(2); game.state = game.previousState; }
-            else if (Model_SaveExists(2)) { Model_LoadGame(2); game.state = STATE_PLAYING; }
-        }
-        else if (trigger3) {
-            if (game.state == STATE_SAVE_MENU) { Model_SaveGame(3); game.state = game.previousState; }
-            else if (Model_SaveExists(3)) { Model_LoadGame(3); game.state = STATE_PLAYING; }
-        }
-    }
-}
 
 static void HandlePlaying(Vector2 mousePos, bool mouseClicked, bool enterPressed) {
     game.timeRemaining -= GetFrameTime();
